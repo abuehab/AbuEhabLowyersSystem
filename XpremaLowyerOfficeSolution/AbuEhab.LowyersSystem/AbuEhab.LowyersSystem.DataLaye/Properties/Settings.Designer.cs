@@ -26,7 +26,8 @@ namespace AbuEhab.LowyersSystem.DataLaye.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ABUEHAB-PC;Initial Catalog=Court;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=AymanSultan-pc\\SQLEXPRESS;Initial Catalog=CurtData;Integrated Securit" +
+            "y=True")]
         public string CurtDataConnectionString {
             get {
                 return ((string)(this["CurtDataConnectionString"]));
