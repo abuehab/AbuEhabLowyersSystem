@@ -99,6 +99,12 @@
     <Folder Include="Forms\Lowyers Forms\" />
     <Folder Include="Reports\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AbuEhab.LowyersSystem.DataLaye\AbuEhab.LowyersSystem.DataLaye.csproj">
+      <Project>{2a338a15-fbd8-4fe5-8b2c-4effe56b3816}</Project>
+      <Name>AbuEhab.LowyersSystem.DataLaye</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
