@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using AbuEhab;
 namespace AbuEhab.LowyersSystem.Interface.Forms.Employees_Forms
 {
     public partial class FrmEmployees : Form
@@ -44,7 +44,8 @@ namespace AbuEhab.LowyersSystem.Interface.Forms.Employees_Forms
                 });
 
             });
-
+            _Styler style = new _Styler();
+            style .GridFullStyle(Dgv);
         }
 
 
