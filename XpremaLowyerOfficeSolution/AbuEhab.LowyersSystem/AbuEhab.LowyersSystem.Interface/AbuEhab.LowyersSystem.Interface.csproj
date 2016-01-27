@@ -50,6 +50,30 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Employees Forms\FrmAddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees Forms\FrmAddEmployee.Designer.cs">
+      <DependentUpon>FrmAddEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees Forms\FrmEditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees Forms\FrmEditEmployee.Designer.cs">
+      <DependentUpon>FrmEditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees Forms\FrmEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees Forms\FrmEmployees.Designer.cs">
+      <DependentUpon>FrmEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employees Forms\FrmViewEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Employees Forms\FrmViewEmployee.Designer.cs">
+      <DependentUpon>FrmViewEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -72,7 +96,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Forms\Employees Forms\" />
     <Folder Include="Forms\Lowyers Forms\" />
     <Folder Include="Reports\" />
   </ItemGroup>
