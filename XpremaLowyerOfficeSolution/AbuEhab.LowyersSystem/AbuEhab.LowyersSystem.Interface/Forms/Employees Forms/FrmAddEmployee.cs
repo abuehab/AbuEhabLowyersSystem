@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using AbuEhab;
 
 namespace AbuEhab.LowyersSystem.Interface.Forms.Employees_Forms
 {
@@ -20,7 +21,7 @@ namespace AbuEhab.LowyersSystem.Interface.Forms.Employees_Forms
 
 
 
-
+        
         EmployeeCmd cmd = new EmployeeCmd();
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -39,9 +40,14 @@ namespace AbuEhab.LowyersSystem.Interface.Forms.Employees_Forms
                 // كمل الكود 
                 // او
                 // Start Save New Employee//
+                _Operation.StartOperation(this);
+
+
                 Employee tb = new Employee() { EmployeeName = txtEmployeeName .Text,Address=txtAddress.Text,
                                             Email=txtEmail.Text ,IdNumber=txtIDCard.Text,Phone=txtPhone.Text  };
                 cmd.NewEmployee(tb);
+                _Operation.EndOperation(this);
+
                 MessageBox.Show("Saved ");
             }
         }

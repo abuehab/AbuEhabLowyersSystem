@@ -71,6 +71,12 @@
     <Compile Include="Forms\Employees Forms\FrmViewEmployee.Designer.cs">
       <DependentUpon>FrmViewEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Lowyers Forms\FrmLowyers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Lowyers Forms\FrmLowyers.Designer.cs">
+      <DependentUpon>FrmLowyers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Employees Forms\FrmAddEmployee.resx">
@@ -102,7 +108,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Forms\Lowyers Forms\" />
     <Folder Include="Reports\" />
   </ItemGroup>
   <ItemGroup>
