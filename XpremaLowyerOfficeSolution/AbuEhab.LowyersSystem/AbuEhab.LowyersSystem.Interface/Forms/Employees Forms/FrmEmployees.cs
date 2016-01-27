@@ -36,7 +36,7 @@ namespace AbuEhab.LowyersSystem.Interface.Forms.Employees_Forms
 
 
                     Dgv.Rows.Add(i.Id.ToString(),
-                                              i.EmployeeName, i.Address, i.IdNumber, i.Phone, i.Described
+                                              i.EmployeeName, i.Address, i.IdNumber, i.Phone,i.Email, i.Described
 
 
                                             );
@@ -70,6 +70,7 @@ namespace AbuEhab.LowyersSystem.Interface.Forms.Employees_Forms
                     frm.TargetEmployee = rw;
 
                     frm.ShowDialog();
+                    FrmEmployees_Load(sender, e);
                 }
 
                 // Delete 
@@ -87,7 +88,7 @@ namespace AbuEhab.LowyersSystem.Interface.Forms.Employees_Forms
                         // _Operation.StartOperation(this);
 
                         cmd.DeleteEmployee(rw, rw.Id);
-
+                        FrmEmployees_Load(sender, e);
                     }
                 }
             }
