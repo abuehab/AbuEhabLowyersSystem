@@ -15,5 +15,20 @@ namespace AbuEhab.LowyersSystem.Interface.Forms.Employees_Forms
         {
             InitializeComponent();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmAddEmployee_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

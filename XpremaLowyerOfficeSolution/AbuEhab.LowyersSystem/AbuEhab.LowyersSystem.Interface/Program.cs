@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AbuEhab.LowyersSystem.Interface.Forms.Employees_Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
@@ -15,7 +16,7 @@ namespace AbuEhab.LowyersSystem.Interface
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FrmEmployees());
         }
     }
 }
