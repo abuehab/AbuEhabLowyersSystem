@@ -15,8 +15,6 @@ namespace AbuEhab.LowyersSystem.DataLaye.Tables_Classes
             context = new DbDataContext();
             context.Employees.InsertOnSubmit(employee);
             context.SubmitChanges();
-
-
             return true;
         }
 

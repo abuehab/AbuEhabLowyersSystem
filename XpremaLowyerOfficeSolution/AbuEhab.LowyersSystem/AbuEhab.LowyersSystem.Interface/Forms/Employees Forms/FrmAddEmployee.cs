@@ -59,7 +59,13 @@ namespace AbuEhab.LowyersSystem.Interface.Forms.Employees_Forms
 
         private void btnNew_Click(object sender, EventArgs e)
         {
+            foreach (Control item in this.Controls)
+            {
+                if (item.GetType() == typeof(TextBox))
+                    ((TextBox)item).Clear();
 
+                
+            }
         }
     }
 }

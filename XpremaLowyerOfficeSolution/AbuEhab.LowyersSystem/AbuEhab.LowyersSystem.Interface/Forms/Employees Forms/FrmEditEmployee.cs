@@ -7,10 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using AbuEhab.LowyersSystem.DataLaye;
+using AbuEhab.LowyersSystem.DataLaye.Tables_Classes;
 namespace AbuEhab.LowyersSystem.Interface.Forms.Employees_Forms
 {
     public partial class FrmEditEmployee : Form
     {
+        EmployeeCmd cmd = new EmployeeCmd();
+
         public FrmEditEmployee()
         {
             InitializeComponent();
@@ -32,7 +35,20 @@ namespace AbuEhab.LowyersSystem.Interface.Forms.Employees_Forms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            if (txtEmployeeName.Text != string.Empty)
+            {
+                Employee emp = new Employee()
+                {
+                    EmployeeName = txtEmployeeName.Text,
+                    Address = txtAddress.Text,
+                    IdNumber = txtIDCard.Text,
+                    Phone = txtPhone.Text,
+                    Email = txtEmail.Text
+                };
+                cmd.EditEmployee(emp, TargetEmployee.Id);
+                MessageBox.Show("تم التعديل");
+                base.Close();
+            }
         }
 
 

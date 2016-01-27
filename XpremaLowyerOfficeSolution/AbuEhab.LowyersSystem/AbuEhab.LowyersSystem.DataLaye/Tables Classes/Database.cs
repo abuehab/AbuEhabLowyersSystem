@@ -9,5 +9,6 @@ namespace AbuEhab.LowyersSystem.DataLaye.Tables_Classes
     {
 
         public static DbDataContext context = new DbDataContext();
+
     }
 }
