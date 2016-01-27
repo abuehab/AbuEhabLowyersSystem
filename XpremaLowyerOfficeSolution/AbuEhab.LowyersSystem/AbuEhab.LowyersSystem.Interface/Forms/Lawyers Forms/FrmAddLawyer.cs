@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace AbuEhab.LowyersSystem.Interface.Forms.Lowyers_Forms
 {
-    public partial class FrmLowyers : Form
+    public partial class FrmAddLawyer : Form
     {
-        public FrmLowyers()
+        public FrmAddLawyer()
         {
             InitializeComponent();
         }
