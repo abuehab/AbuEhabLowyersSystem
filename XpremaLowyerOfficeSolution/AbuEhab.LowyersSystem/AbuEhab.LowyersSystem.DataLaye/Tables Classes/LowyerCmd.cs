@@ -73,5 +73,22 @@ namespace AbuEhab.LowyersSystem.DataLaye.Tables_Classes
                 return null;
             }
         }
+
+        public Lawyer GetLawyerById(int x)
+        {
+            try
+            {
+                var q = CompiledQuery.Compile((DbDataContext db, int id) =>
+                    db.Lawyers.Where(p => p.Id == x));
+
+                var low = q(context,x).Single();
+                return low;
+            }
+            catch (Exception)
+            {
+                return null;    
+             
+            }
+        }
     }
 }
