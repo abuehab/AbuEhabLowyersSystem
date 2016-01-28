@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Linq;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace AbuEhab.LowyersSystem.DataLaye.Tables_Classes
@@ -48,6 +49,22 @@ namespace AbuEhab.LowyersSystem.DataLaye.Tables_Classes
                 var q = CompiledQuery.Compile((DbDataContext db) =>
                                     db.Lawyers);
                 var low = q(context).ToList();
+                return low;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+        }
+
+        public Lawyer GetLawyerByName(string n)
+        {
+            try
+            {
+                var q = CompiledQuery.Compile((DbDataContext db,string name) =>
+                                    db.Lawyers.Where(p=>p.LawyerName==name));
+                var low = q(context, n).Single();
                 return low;
             }
             catch (Exception)
