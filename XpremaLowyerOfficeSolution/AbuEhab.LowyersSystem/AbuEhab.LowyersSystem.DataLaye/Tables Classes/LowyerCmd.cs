@@ -10,6 +10,11 @@ namespace AbuEhab.LowyersSystem.DataLaye.Tables_Classes
 
 
         // Go Do It 
+        /// <summary>
+        /// This Method to add new lowyer
+        /// </summary>
+        /// <param name="lo">Object</param>
+        /// <returns> Return true  or false </returns>
         public bool NewLowyer(Lawyer lo)
         {
             context =new DbDataContext();
@@ -17,5 +22,8 @@ namespace AbuEhab.LowyersSystem.DataLaye.Tables_Classes
             context.SubmitChanges();
             return true;
         }
+
+
+       
     }
 }
