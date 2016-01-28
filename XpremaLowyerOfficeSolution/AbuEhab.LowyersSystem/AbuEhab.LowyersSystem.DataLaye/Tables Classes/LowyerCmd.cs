@@ -41,6 +41,20 @@ namespace AbuEhab.LowyersSystem.DataLaye.Tables_Classes
             return true;
         }
 
-       
+        public List<Lawyer> AlLawyers()
+        {
+            try
+            {
+                var q = CompiledQuery.Compile((DbDataContext db) =>
+                                    db.Lawyers);
+                var low = q(context).ToList();
+                return low;
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+        }
     }
 }
