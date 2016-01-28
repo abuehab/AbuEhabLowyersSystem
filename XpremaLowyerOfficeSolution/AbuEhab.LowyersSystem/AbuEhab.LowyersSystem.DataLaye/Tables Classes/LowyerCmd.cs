@@ -90,5 +90,17 @@ namespace AbuEhab.LowyersSystem.DataLaye.Tables_Classes
              
             }
         }
+
+        public bool DeleteLawyer(Lawyer law, int xid)
+        {
+            law.Id = xid;
+            var q = CompiledQuery.Compile((DbDataContext db, int i) =>
+                db.Lawyers.Single(p => p.Id == i));
+            var xLaw = q(context, xid);
+            context.Lawyers.DeleteOnSubmit(xLaw);
+            context.SubmitChanges();
+
+            return true;
+        }
     }
 }
