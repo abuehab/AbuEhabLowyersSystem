@@ -54,18 +54,24 @@ namespace AbuEhab.LowyersSystem.Interface.Forms.Employees_Forms
 
         private void FrmAddEmployee_Load(object sender, EventArgs e)
         {
-
+            _Operation.ClearTextControls(this); // لتفريغ مربعات النص 
         }
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-            foreach (Control item in this.Controls)
-            {
-                if (item.GetType() == typeof(TextBox))
-                    ((TextBox)item).Clear();
+            _Operation.ClearTextControls(this); // لتفريغ مربعات النص 
+     
+        }
+        _Styler xStyler = new _Styler();
+        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            xStyler.TextKeyPressWithoutDot(txtPhone, e);
+        }
 
-                
-            }
+        private void txtIDCard_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            xStyler.TextKeyPressWithoutDot(txtIDCard, e);
+
         }
     }
 }

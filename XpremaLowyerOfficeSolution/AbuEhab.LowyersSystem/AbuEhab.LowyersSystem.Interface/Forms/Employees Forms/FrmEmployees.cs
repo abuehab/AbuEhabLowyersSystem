@@ -9,13 +9,15 @@ using System.Text;
 using System.Windows.Forms;
 using AbuEhab;
 namespace AbuEhab.LowyersSystem.Interface.Forms.Employees_Forms
-{
+{ 
+
     public partial class FrmEmployees : Form
     {
         public FrmEmployees()
         {
             InitializeComponent();
         }
+        
         EmployeeCmd cmd = new EmployeeCmd();
 
         void PopulateDgv()
